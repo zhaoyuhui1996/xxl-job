@@ -80,22 +80,34 @@ public class JobInfoController {
 	@ResponseBody
 	public ReturnT<String> add(HttpServletRequest request, XxlJobInfo jobInfo) {
 		// valid permission
-		PermissionInterceptor.validJobGroupPermission(request, jobInfo.getJobGroup());
+		// PermissionInterceptor.validJobGroupPermission(request, jobInfo.getJobGroup());
 
 		// opt
-		XxlJobUser loginUser = PermissionInterceptor.getLoginUser(request);
-		return xxlJobService.add(jobInfo, loginUser);
+		// XxlJobUser loginUser = PermissionInterceptor.getLoginUser(request);
+		XxlJobUser loginUser = new XxlJobUser();
+		ReturnT<String> returnT = xxlJobService.add(jobInfo, loginUser);
+		// 新增完，接着启动任务
+		String xxlJobInfoId = returnT.getContent();
+		xxlJobService.start(Integer.parseInt(xxlJobInfoId));
+		return returnT;
 	}
 	
 	@RequestMapping("/update")
 	@ResponseBody
 	public ReturnT<String> update(HttpServletRequest request, XxlJobInfo jobInfo) {
 		// valid permission
-		PermissionInterceptor.validJobGroupPermission(request, jobInfo.getJobGroup());
+		// PermissionInterceptor.validJobGroupPermission(request, jobInfo.getJobGroup());
 
 		// opt
-		XxlJobUser loginUser = PermissionInterceptor.getLoginUser(request);
-		return xxlJobService.update(jobInfo, loginUser);
+		// XxlJobUser loginUser = PermissionInterceptor.getLoginUser(request);
+
+		//把旧的定时任务停掉
+		xxlJobService.stop(jobInfo.getId());
+		XxlJobUser loginUser = new XxlJobUser();
+		ReturnT<String> returnT = xxlJobService.update(jobInfo, loginUser);
+		// 修改完成之后启动新的定时任务
+		xxlJobService.start(jobInfo.getId());
+		return returnT;
 	}
 	
 	@RequestMapping("/remove")

@@ -49,8 +49,8 @@ public class ScriptUtil {
      * @param scriptFile
      * @param logFile
      * @param params
-     * @return
-     * @throws IOException
+     * @return int
+     * @throws IOException IOException
      */
     public static int execToFile(String command, String scriptFile, String logFile, String... params) throws IOException {
 

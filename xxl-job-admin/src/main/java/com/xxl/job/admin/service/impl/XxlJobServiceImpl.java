@@ -154,7 +154,7 @@ public class XxlJobServiceImpl implements XxlJobService {
 		// add in db
 		jobInfo.setAddTime(new Date());
 		jobInfo.setUpdateTime(new Date());
-		jobInfo.setGlueUpdatetime(new Date());
+		jobInfo.setGlueUpdateTime(new Date());
 		xxlJobInfoDao.save(jobInfo);
 		if (jobInfo.getId() < 1) {
 			return new ReturnT<String>(ReturnT.FAIL_CODE, (I18nUtil.getString("jobinfo_field_add")+I18nUtil.getString("system_fail")) );

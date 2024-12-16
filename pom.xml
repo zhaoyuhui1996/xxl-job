@@ -43,6 +43,16 @@
 		<mysql-connector-j.version>9.1.0</mysql-connector-j.version>
 		<!-- dynamic language -->
 		<groovy.version>4.0.24</groovy.version>
+		<!-- commons-lang3 -->
+		<commons-lang3.version>3.17.0</commons-lang3.version>
+		<!-- lombok -->
+		<lombok.version>1.18.34</lombok.version>
+		<!-- fastjson2 -->
+		<fastjson2.version>2.0.38</fastjson2.version>
+		<!-- guava -->
+		<guava.version>33.3.1-jre</guava.version>
+		<!-- dameng -->
+		<dm.version>8.1.1.193</dm.version>
 	</properties>
 
 	<build>

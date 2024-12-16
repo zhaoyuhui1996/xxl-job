@@ -63,7 +63,7 @@ public class XxlJobRemotingUtil {
      * @param timeout
      * @param requestObj
      * @param returnTargClassOfT
-     * @return
+     * @return ReturnT
      */
     public static ReturnT postBody(String url, String accessToken, int timeout, Object requestObj, Class returnTargClassOfT) {
         HttpURLConnection connection = null;

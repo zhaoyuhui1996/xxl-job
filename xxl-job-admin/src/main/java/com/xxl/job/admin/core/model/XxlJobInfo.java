@@ -34,7 +34,7 @@ public class XxlJobInfo {
 	private String glueType;		// GLUE类型	#com.xxl.job.core.glue.GlueTypeEnum
 	private String glueSource;		// GLUE源代码
 	private String glueRemark;		// GLUE备注
-	private Date glueUpdatetime;	// GLUE更新时间
+	private Date glueUpdateTime;	// GLUE更新时间
 
 	private String childJobId;		// 子任务ID，多个逗号分隔
 
@@ -195,12 +195,12 @@ public class XxlJobInfo {
 		this.glueRemark = glueRemark;
 	}
 
-	public Date getGlueUpdatetime() {
-		return glueUpdatetime;
+	public Date getGlueUpdateTime() {
+		return glueUpdateTime;
 	}
 
-	public void setGlueUpdatetime(Date glueUpdatetime) {
-		this.glueUpdatetime = glueUpdatetime;
+	public void setGlueUpdateTime(Date glueUpdateTime) {
+		this.glueUpdateTime = glueUpdateTime;
 	}
 
 	public String getChildJobId() {

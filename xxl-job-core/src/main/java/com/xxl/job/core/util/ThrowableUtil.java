@@ -12,7 +12,7 @@ public class ThrowableUtil {
      * parse error to string
      *
      * @param e
-     * @return
+     * @return str
      */
     public static String toString(Throwable e) {
         StringWriter stringWriter = new StringWriter();

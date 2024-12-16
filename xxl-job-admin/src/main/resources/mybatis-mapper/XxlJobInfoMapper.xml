@@ -29,7 +29,7 @@
 	    <result column="glue_type" property="glueType" />
 	    <result column="glue_source" property="glueSource" />
 	    <result column="glue_remark" property="glueRemark" />
-		<result column="glue_updatetime" property="glueUpdatetime" />
+		<result column="glue_update_time" property="glueUpdateTime" />
 
 		<result column="child_jobid" property="childJobId" />
 
@@ -58,7 +58,7 @@
 		t.glue_type,
 		t.glue_source,
 		t.glue_remark,
-		t.glue_updatetime,
+		t.glue_update_time,
 		t.child_jobid,
 		t.trigger_status,
 		t.trigger_last_time,
@@ -131,7 +131,7 @@
 			glue_type,
 			glue_source,
 			glue_remark,
-			glue_updatetime,
+			glue_update_time,
 			child_jobid,
 			trigger_status,
 			trigger_last_time,
@@ -155,7 +155,7 @@
 			#{glueType},
 			#{glueSource},
 			#{glueRemark},
-			#{glueUpdatetime},
+			#{glueUpdateTime},
 			#{childJobId},
 			#{triggerStatus},
 			#{triggerLastTime},
@@ -193,7 +193,7 @@
 			glue_type = #{glueType},
 			glue_source = #{glueSource},
 			glue_remark = #{glueRemark},
-			glue_updatetime = #{glueUpdatetime},
+			glue_update_time = #{glueUpdateTime},
 			child_jobid = #{childJobId},
 			trigger_status = #{triggerStatus},
 			trigger_last_time = #{triggerLastTime},

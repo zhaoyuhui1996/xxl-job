@@ -17,8 +17,8 @@ public class JdkSerializeTool {
     /**
      * 将对象-->byte[] (由于jedis中不支持直接存储object所以转换成byte[]存入)
      *
-     * @param object
-     * @return
+     * @param object obj
+     * @return byteArr
      */
     public static byte[] serialize(Object object) {
         ObjectOutputStream oos = null;
@@ -47,10 +47,10 @@ public class JdkSerializeTool {
     /**
      * 将byte[] -->Object
      *
-     * @param bytes
-     * @return
+     * @param bytes byteArr
+     * @return obj
      */
-    public static  <T> Object deserialize(byte[] bytes, Class<T> clazz) {
+    public static <T> Object deserialize(byte[] bytes, Class<T> clazz) {
         ObjectInputStream ois = null;
         ByteArrayInputStream bais = null;
         try {
